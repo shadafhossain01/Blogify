@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-dark p-3">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fs-4" href="/">Blogify</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav d-flex align-items-center gap-3 ">
+                <li class="nav-item">
+                    <a class="nav-link active  text-white fs-4" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white fs-4" href="/addBlog">Add New Blog</a>
+                </li>
+
+                <% if (locals.user) { %>
+                              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+                            class="userProfileImg" />
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item  fs-5" href="/logout">Logout</a></li>
+                    </ul>
+                </li>
+                <% } %>
+
+                                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle  text-white fs-4" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Create Account
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item  fs-5" href="/signup">Singin</a></li>
+                        <li><a class="dropdown-item  fs-5" href="/signin">Login</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>

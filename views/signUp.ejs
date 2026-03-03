@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <%- include('partials/nav.ejs') %>
+            <div class="container d-flex justify-content-center align-items-center flex-column">
+                <h2 class="mt-5 mb-5">Sign Up Page</h2>
+                <form action="/signup" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name :</label>
+                        <input type="text" class="form-control" id="name" name="name"/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email :</label>
+                        <input type="email" class="form-control" id="email" name="email" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password :</label>
+                        <input type="password" class="form-control" id="password" name="password" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="image" class="form-label">Profile Iamge :</label>
+                        <input type="file" class="form-control" id="image" name="image"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <%- include('partials/script.ejs') %>
+    </body>
+
+</html>

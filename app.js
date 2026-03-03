@@ -13,6 +13,9 @@ app.set("view engine",'ejs')
 app.set("views",path.resolve("views"))
 app.use(express.static(path.resolve("public")))
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.use("/", userRoute);
 
 app.listen(PORT,()=>console.log(`Server started at Port ${PORT}`))
