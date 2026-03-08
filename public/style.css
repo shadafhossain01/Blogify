@@ -11,3 +11,27 @@ body{
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
 }
+
+.blogImg{
+      height: 400px;
+      margin-bottom: 25px;
+}
+
+input{
+      width: 450px !important;
+}
+
+.commentImg{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+}
+
+.card-img-top{
+      height: 150px;
+      object-fit: cover;
+}

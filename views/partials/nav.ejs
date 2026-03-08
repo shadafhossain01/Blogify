@@ -11,32 +11,29 @@
                     <a class="nav-link active  text-white fs-4" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-white fs-4" href="/addBlog">Add New Blog</a>
+                    <a class="nav-link  text-white fs-4" href="/blog/addBlog">Add New Blog</a>
                 </li>
 
-                <% if (locals.user) { %>
-                              <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
-                            class="userProfileImg" />
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item  fs-5" href="/logout">Logout</a></li>
-                    </ul>
-                </li>
-                <% } %>
-
-                                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle  text-white fs-4" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Create Account
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item  fs-5" href="/signup">Singin</a></li>
-                        <li><a class="dropdown-item  fs-5" href="/signin">Login</a></li>
-                    </ul>
-                </li>
+        <% if (locals.user) { %>
+  <li class="nav-item dropdown">
+   <li class="nav-item dropdown"> 
+    <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+        <img src="<%=locals.user.image%>" class="userProfileImg" /> 
+    </a> 
+    <ul class="dropdown-menu"> 
+        <li><a class="dropdown-item fs-5" href="/logout">Logout</a></li>
+  </li>
+<% } else { %>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-white fs-4" href="#" data-bs-toggle="dropdown">
+      Create Account
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item fs-5" href="/signup">Signup</a></li>
+      <li><a class="dropdown-item fs-5" href="/signin">Login</a></li>
+    </ul>
+  </li>
+<% } %>
                 
             </ul>
         </div>
